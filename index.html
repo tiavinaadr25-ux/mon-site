@@ -1,11 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Mon premier site</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staffly — Gérez votre équipe sans effort</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Hello World ! </h1>
+
+  <!-- SECTION 1 : HERO -->
+  <section class="hero">
+
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-icon">S</div>
+        <span class="logo-text"><strong>Staff</strong><span class="logo-accent">ly</span></span>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Gérez votre équipe<br />
+        <span class="hero-highlight">sans effort</span> au quotidien
+      </h1>
+      <p class="hero-subtitle">
+        Staffly est l'outil pensé pour les managers de restaurants.<br />
+        Présences, tâches, notifications et congés.
+      </p>
+      <a href="#steps" class="btn-primary">Commencer gratuitement →</a>
+    </div>
+
+  </section>
+
+  <!-- SECTION 2 : ÉTAPES + CALCULATRICE -->
+  <section class="steps-section" id="steps">
+
+    <div class="steps-header">
+      <h2 class="section-title">Opérationnel en 10 minutes</h2>
+      <p class="section-subtitle">
+        Pas de formation, pas d'intégration complexe.<br />
+        Staffly s'adapte à votre rythme dès le premier jour.
+      </p>
+    </div>
+
+    <div class="steps-grid">
+
+      <!-- Étapes -->
+      <div class="steps-list">
+
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <h3>Créez votre espace manager</h3>
+            <p>Inscrivez-vous en 2 minutes. Renseignez le nom de votre établissement, votre rôle et les premières infos de votre équipe.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <h3>Ajoutez vos employés</h3>
+            <p>Importez votre liste ou ajoutez-les manuellement.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-body">
+            <h3>Lancez le suivi dès aujourd'hui</h3>
+            <p>Commencez à pointer les présences, créez vos premières tâches, activez les notifications. Votre tableau de bord se remplit en temps réel.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-body">
+            <h3>Gagnez du temps chaque jour</h3>
+            <p>En moins d'une semaine, la gestion quotidienne de votre équipe devient fluide. Moins de stress, plus de focus sur votre cuisine et vos clients.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Calculatrice -->
+      <div class="calculator-card">
+        <h3 class="calc-title">Calculez combien de temps<br />vous allez gagner&nbsp;!</h3>
+
+        <div class="calc-form">
+
+          <div class="form-group">
+            <label for="nb-employes">Nombre d'employés</label>
+            <input type="number" id="nb-employes" placeholder="Ex : 8" min="1" />
+          </div>
+
+          <div class="form-group">
+            <label for="nb-taches">Nombre de tâches par jour</label>
+            <input type="number" id="nb-taches" placeholder="Ex : 5" min="1" />
+          </div>
+
+          <div class="form-group">
+            <label for="duree-tache">Durée moyenne d'une tâche (min)</label>
+            <input type="number" id="duree-tache" placeholder="Ex : 10" min="1" />
+          </div>
+
+          <button class="btn-calculer" onclick="calculer()">CALCULEZ</button>
+
+        </div>
+
+        <div class="calc-result" id="calc-result">
+          <p>Vous pourriez gagner</p>
+          <div class="result-highlight" id="result-value">— h / semaine</div>
+          <p>grâce à Staffly !</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
